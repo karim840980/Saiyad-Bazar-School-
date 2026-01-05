@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Dashboard - Vananchal Vidya</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .subject-container {
+            padding: 40px 10%;
+            background-color: #f9f9f9;
+            min-height: 80vh;
+        }
+        .subject-header {
+            border-left: 8px solid #f39c12;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        .subject-header h2 { color: #1a4d2e; margin: 0; }
+        
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        /* Subject Card Design */
+        .subject-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        .subject-box:hover {
+            border-color: #1a4d2e;
+            transform: translateY(-5px);
+            background: #f1f8f4;
+        }
+        .sub-icon {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .sub-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #1a4d2e;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo">VANANCHAL VIDYA</div>
+    </header>
+
+    <div class="subject-container">
+        <div class="subject-header">
+            <h2>Select Subject</h2>
+            <p>Class: <b>1st Standard</b></p>
+        </div>
+
+        <div class="subject-grid">
+                <a href="class1-hindi-book.html" class="subject-box">
+    <span class="sub-icon">📖</span>
+    <span class="sub-name">Hindi (Sarangi)</span>
+</a>
+</span>
+            </a>
+
+            <a href="#" class="subject-box">
+                <span class="sub-icon">🔢</span>
+                <span class="sub-name">Mathematics</span>
+            </a>
+
+            <a href="#" class="subject-box">
+                <span class="sub-icon">🔡</span>
+                <span class="sub-name">English (Mridang)</span>
+            </a>
+
+            <a href="#" class="subject-box">
+                <span class="sub-icon">🌍</span>
+                <span class="sub-name">General Knowledge</span>
+            </a>
+            
+            <a href="#" class="subject-box">
+                <span class="sub-icon">🎨</span>
+                <span class="sub-name">Arts & Craft</span>
+                <div id="new-subjects-list" class="subject-grid"></div>
+                <div id="student-list" class="subject-grid"></div>
+
+<script>
+    // Ye function page khulte hi data load karega
+    window.onload = function() {
+        const container = document.getElementById('new-subjects-list');
+        // Admin panel se save kiya hua data nikalna
+        const savedData = JSON.parse(localStorage.getItem('schoolData')) || [];
+
+        savedData.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'subject-card'; // Aapki CSS class ka naam
+            card.innerHTML = `
+                <h3>${item.subjectName}</h3>
+                <p>${item.chapterName}</p>
+                <a href="${item.bookLink}" class="btn">Read Book</a>
+            `;
+            container.appendChild(card);
+        });
+    }
+</script>
+
+            </a>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="classes-dashboard.html" style="color: #666; text-decoration: none;">← Change Class</a>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

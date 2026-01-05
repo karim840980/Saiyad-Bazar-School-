@@ -1,0 +1,257 @@
+/* Global Settings */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 1. Sabse upar wala Green Header */
+.top-header {
+    background-color: #1a4d2e; /* Dark Green */
+    color: white;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 2. Beech wala White Navigation */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 50px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 3. Neeche wala Green Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #1a4d2e, #2d6a4f);
+    color: white;
+    padding: 60px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    max-width: 400px;
+}
+
+/* Search Bar inside Hero */
+.search-container input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+}
+/* Cards Container - Jo sabhi cards ko line mein rakhega */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns ek line mein */
+    gap: 20px;
+    padding: 40px 50px;
+    background-color: #f9f9f9;
+}
+
+/* Common Card Style */
+.class-card {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Specific Colors (Image ke mutabiq) */
+.bg-yellow { background-color: #f4d03f; }
+.bg-blue   { background-color: #5499c7; }
+.bg-green  { background-color: #52be80; }
+.bg-dark-green { background-color: #1e8449; color: white; }
+.bg-orange { background-color: #f39c12; }
+
+/* Card ke andar ki image/icon */
+.class-card img {
+    width: 60px;
+    margin-top: 10px;
+}
+/* Footer Container */
+.main-footer {
+    background-color: #1a4d2e; /* Wahi dark green jo header mein tha */
+    color: white;
+    padding: 30px 50px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 50px; /* Logo size */
+    filter: brightness(0) invert(1); /* Logo ko white karne ke liye agar wo black hai */
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+/* Modal (Background) */
+.modal {
+    display: none; /* Shuruat mein chhupa rahega */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.4s;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Subject Grid */
+.subject-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sub-item {
+    padding: 15px;
+    background: #f1f8f4;
+    border: 1px solid #1a4d2e;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@keyframes slideDown {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* Login Page Background */
+.login-body {
+    background: linear-gradient(135deg, #1a4d2e 0%, #2d6a4f 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* White Card */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #1a4d2e;
+    margin-top: 15px;
+}
+
+/* Form Styling */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Padding se width na badhe */
+}
+
+/* Green Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a4d2e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #2d6a4f;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #1a4d2e;
+    text-decoration: none;
+}

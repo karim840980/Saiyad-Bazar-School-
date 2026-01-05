@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Vananchal Vidya</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .register-screen {
+            background: linear-gradient(135deg, #1a4d2e, #2d6a4f);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .register-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+        }
+        .register-box h2 { 
+            color: #1a4d2e; 
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-field, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .reg-btn {
+            background: #f39c12; /* Orange color for register */
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .reg-btn:hover { background: #e67e22; }
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-screen">
+    <div class="register-box">
+        <h2>CREATE ACCOUNT</h2>
+        <form>
+            <div class="form-group">
+                <label>Student Full Name</label>
+                <input type="text" class="input-field" placeholder="Enter Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Select Class</label>
+                <select>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" class="input-field" placeholder="10 Digit Number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Create Password</label>
+                <input type="password" class="input-field" placeholder="New Password" required>
+            </div>
+
+            <button type="submit" class="reg-btn">REGISTER NOW</button>
+        </form>
+        
+        <div class="back-link">
+            Aready have an account? <a href="login.html" style="color: #1a4d2e;">Login here</a><br><br>
+            <a href="index.html" style="text-decoration: none; color: #666;">← Back to Home</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

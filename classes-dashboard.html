@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes Dashboard - Vananchal Vidya</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dashboard Specific Styling */
+        .dashboard-wrapper {
+            background-color: #f4f7f6;
+            min-height: 100vh;
+        }
+        .dashboard-header {
+            background: #1a4d2e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .class-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px 10%;
+        }
+        .dashboard-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-top: 5px solid #1a4d2e;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .class-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .view-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: #1a4d2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .view-btn:hover { background: #f39c12; }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-header">
+        <h1>School Classes Dashboard</h1>
+        <p>Apni class chunein aur padhai shuru karein</p>
+    </div>
+
+    <div class="class-grid-container">
+        
+        <div class="dashboard-card">
+            <div class="class-icon">🏫</div>
+            <h3>PRIMARY (Class 1-5)</h3>
+            <p>Foundational learning for young minds.</p>
+            <a href="class1-subjects.html" class="view-btn">View Subjects</a>
+        </div>
+
+        <div class="dashboard-card" style="border-top-color: #f39c12;">
+            <div class="class-icon">📚</div>
+            <h3>SECONDARY (Class 6-10)</h3>
+            <p>Core subjects and board preparation.</p>
+            <a href="#" class="view-btn" style="background: #f39c12;">Explore</a>
+        </div>
+
+        <div class="dashboard-card" style="border-top-color: #5499c7;">
+            <div class="class-icon">🎓</div>
+            <h3>HIGHER SECONDARY</h3>
+            <p>Arts, Science, and Commerce streams.</p>
+            <a href="#" class="view-btn" style="background: #5499c7;">Explore</a>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; padding-bottom: 50px;">
+        <a href="index.html" style="color: #1a4d2e; font-weight: bold;">← Back to Home Page</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - Vananchal Vidya</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { display: flex; margin: 0; background: #f4f4f4; }
+        
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background: #1a4d2e;
+            height: 100vh;
+            color: white;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar h2 { border-bottom: 2px solid #f39c12; padding-bottom: 10px; }
+        .sidebar-menu { list-style: none; padding: 0; margin-top: 30px; }
+        .sidebar-menu li { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
+        .sidebar-menu li:hover { background: #2d6a4f; }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 270px;
+            padding: 40px;
+            width: 100%;
+        }
+        .admin-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .add-btn {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul class="sidebar-menu">
+            <li>➕ Add New Class</li>
+            <li>➕ Add Subject</li>
+            <li>➕ Upload Book</li>
+            <li>➕ Add Chapter</li>
+            <li onclick="window.location.href='index.html'" style="color: #f39c12;">🚪 Logout</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome, Owner!</h1>
+        <p>Yahan se aap nayi cheezein website par jodd sakte hain.</p>
+
+        <div class="admin-card">
+            <h3>Add New Subject/Chapter</h3>
+            <form id="addForm">
+                <label>Select Class</label>
+                <select id="classSelect" class="form-input">
+                    <option>Class 1</option>
+                    <option>Class 8</option>
+                    <option>Class 10</option>
+                </select>
+
+                <label>Subject Name</label>
+                ​<input type="text" id="subjectInput" class="form-input" ...>
+
+                <label>Chapter Title</label>
+                <input type="text" id="chapterInput" class="form-input" ...>
+
+                <label>Upload Book PDF Link</label>
+                <input type="text" id="linkInput" class="form-input" placeholder="Paste PDF link here">
+
+                <button type="button" class="add-btn" onclick="updateWebsite()">Update Website</button>
+                <div class="admin-card" style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 8px;">
+    <h3 style="color: #1a4d2e; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">
+        📋 Added Subjects List
+    </h3>
+    <div id="admin-data-list">
+        </div>
+</div>
+
+            </form>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

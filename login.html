@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vananchal Vidya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Emblem_of_Jharkhand.svg/200px-Emblem_of_Jharkhand.svg.png" alt="Logo" width="60">
+            <h2>Student Login</h2>
+            <p>Vananchal Vidya Portal mein swagat hai</p>
+
+            <form>
+                <div class="input-group">
+                    <label>Mobile Number / Email</label>
+                    <input type="text" id="adminID" placeholder="Enter your ID" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="adminPass" placeholder="Enter Password" required>
+                </div>
+
+                <button type="button" class="login-btn" onclick="validateLogin()">LOGIN</button>
+                
+                <div class="login-footer">
+                    <a href="#">Forgot Password?</a> | <a href="index.html">Back to Home</a>
+                    <script>
+function validateLogin() {
+    // Input se data lena
+    var id = document.getElementById("adminID").value;
+    var pass = document.getElementById("adminPass").value;
+
+    // Password Check (Aap ise badal sakte hain)
+    if (id === "admin123" && pass === "aman786") {
+        alert("Welcome Owner!");
+        window.location.href = "admin-panel.html"; // Admin Dashboard khulega
+    } else {
+        // Agar password galat hai toh student home page par jayega
+        alert("Login Successful as Student!");
+        window.location.href = "index.html"; 
+    }
+}
+</script>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+function validateLogin() {
+    // 1. Boxes se value nikalna (Jo IDs aapne abhi di hain)
+    var idInput = document.getElementById("adminID").value;
+    var passInput = document.getElementById("adminPass").value;
+
+    // 2. OWNER CHECK Logic
+    // Agar ID 'owner123' aur Password 'aman@admin' hai
+    if (idInput === "owner123" && passInput === "aman@admin") {
+        alert("Welcome Owner! Admin Dashboard khul raha hai...");
+        window.location.href = "admin-panel.html"; 
+    } 
+    // 3. STUDENT CHECK
+    // Agar box khali nahi hai par upar wala password nahi mila
+    else if (idInput !== "" && passInput !== "") {
+        alert("Login Successful as Student!");
+        window.location.href = "index.html"; 
+    } 
+    else {
+        alert("Kripya ID aur Password sahi se bharein!");
+    }
+}
+</script>
+
+</html>

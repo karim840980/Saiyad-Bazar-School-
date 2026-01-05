@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"> <style>
+        .subject-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px;
+        }
+        .subject-item {
+            background: white;
+            border-left: 5px solid #1a4d2e;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .subject-item:hover { background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; margin-top:30px;">Class 1: All Subjects</h1>
+    
+    <div class="subject-list">
+        <div class="subject-item">📖 Hindi (Sarangi)</div>
+        <div class="subject-item">🔢 Mathematics (Anandmay Ganit)</div>
+        <div class="subject-item">ABC English (Mridang)</div>
+        <div class="subject-item">🌍 Environmental Studies</div>
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html">Back to Home</a>
+    </div>
+</body>
+</html>

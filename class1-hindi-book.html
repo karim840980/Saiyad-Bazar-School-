@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1 Hindi - Sarangi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .book-container {
+            padding: 40px 10%;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        /* Book Cover Side */
+        .book-sidebar {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .book-cover {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        /* Chapters Side */
+        .chapters-list {
+            flex: 2;
+            min-width: 300px;
+        }
+        .chapter-card {
+            background: white;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .chapter-card:hover {
+            border-color: #1a4d2e;
+            background: #f1f8f4;
+        }
+        .read-btn {
+            background: #1a4d2e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header" style="background: #1a4d2e; color: white; padding: 20px; text-align: center;">
+        <h1>कक्षा 1: हिंदी (सारंगी)</h1>
+        <a href="subject-dashboard.html" style="color: #f39c12; text-decoration: none;">← Back to Subjects</a>
+    </div>
+
+    <div class="book-container">
+        <div class="book-sidebar">
+            <img src="https://ncert.nic.in/pdf/publication/exemplarproblems/classI/hindi/sarangi_cover.jpg" alt="Sarangi Book Cover" class="book-cover">
+            <h3 style="margin-top:20px;">सारंगी - भाग 1</h3>
+            <p>NCERT/JCERT Curriculum</p>
+        </div>
+
+        <div class="chapters-list">
+            <h2>Chapters / पाठ</h2>
+            
+            <div class="chapter-card">
+                <div><b>पाठ 1:</b> मीना का परिवार</div>
+                <a href="#" class="read-btn">पढ़ें (PDF)</a>
+            </div>
