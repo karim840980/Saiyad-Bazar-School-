@@ -255,3 +255,61 @@ body {
     color: #1a4d2e;
     text-decoration: none;
 }
+/* --- Mobile Responsive Fixes --- */
+
+/* 1. Sabhi images ko screen ke andar rakhne ke liye */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Header aur Buttons ko mobile par sahi karne ke liye */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Isse content niche shift ho jayega */
+    padding: 10px;
+}
+
+/* 3. Hero section (Text aur Image) ko upar-niche karne ke liye */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Mobile par column layout */
+    text-align: center;
+}
+
+/* 4. Desktop ke liye wapas side-by-side layout */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+/* 5. Class Cards ko mobile par 2 columns mein dikhane ke liye */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.class-card {
+    width: 45%; /* Mobile par ek line mein do cards */
+    min-width: 140px;
+}
+.search-container {
+    margin-bottom: 20px; /* Search bar ke niche jagah banayega */
+    padding: 0 15px;      /* Side se thodi jagah */
+}
+
+.hero-image {
+    margin-top: 10px;    /* Photo ke upar thodi jagah */
+}
+.hero-image img {
+    width: 90%;          /* Screen ke thoda andar rahegi */
+    border-radius: 10px; /* Corners thode round ho jayenge */
+    display: block;
+    margin: 0 auto;      /* Center mein rahegi */
+}
